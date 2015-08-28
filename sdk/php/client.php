@@ -20,6 +20,7 @@ use Thrift\Exception\TException;
 try {
 
   $socket = new TSocket('localhost', 9090);
+  $socket->setRecvTimeout(10000);
   $transport = new TBufferedTransport($socket, 1024, 1024);
   $protocol = new TBinaryProtocol($transport);
   $client = new \addrservice\AddressServiceClient($protocol);
@@ -32,7 +33,8 @@ try {
 
   echo $resp->code."\n";
   echo $resp->desc."\n";
-  echo $resp->data."\n";
+  // echo $resp->data."\n";
+  echo "Call finished.\n";
 
   $transport->close();
 

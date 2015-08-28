@@ -25,7 +25,7 @@ func (p *AddressServiceHandler) GetAllAddress(req *addrservice.Request) (res *ad
 	defer db.Close()
 	fmt.Println("Open success")
 
-	rows, err := db.Query("SELECT * FROM lcs_workorder limit 2")
+	rows, err := db.Query("SELECT * FROM xm_region")
 	if err != nil {
 		panic(err.Error())
 	}
