@@ -1,1 +1,4 @@
 # AddressService
+此项目应用Thrift搭建的rpc服务框架
+server端使用go语言开发
+client提供go、php、java三种客户端调用sdk
