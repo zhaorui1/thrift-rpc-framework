@@ -13,11 +13,11 @@ func HandleClient(client *addrservice.AddressServiceClient) (err error) {
 	res, err := client.GetAllAddress(req)
 
 	if err != nil {
-		fmt.Println("Unable to get struct:", err)
+		fmt.Println("Error:", err)
 		return err
 	}
 
-	fmt.Println(res.Code, res.Desc, res.Data)
+	fmt.Println(res.GetCode(), res.GetDesc(), res.GetData())
 	return err
 
 }
