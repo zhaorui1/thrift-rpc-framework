@@ -18,7 +18,7 @@ func NewAddressServiceHandler() *AddressServiceHandler {
 func (p *AddressServiceHandler) GetAllAddress(req *addrservice.Request) (res *addrservice.Response, err error) {
 	fmt.Print("Resquest:", req.GetId(), "\n")
 
-	db, err := sql.Open("mysql", "xmlcs_user:Fx8afnoFWCNgZmm7jJd6qeHjeslz29kQ@tcp(10.237.14.235:3308)/xm_lcs")
+	db, err := sql.Open("mysql", "password@tcp(host:port)/schema")
 	if err != nil {
 		panic(err.Error())
 	}
