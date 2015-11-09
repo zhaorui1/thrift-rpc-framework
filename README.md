@@ -17,4 +17,4 @@ Thrift Rpc Framework
 
 1. 启动server。项目路径下运行：go run main.go.
 2. go启动测试。路径：sdk/go/driver/。 运行：go test
-3. php启动测试。路径：sdk/php/driver。运行：php client.go
+3. php启动测试。路径：sdk/php/driver。运行：php client.php
